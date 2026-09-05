@@ -1,0 +1,1144 @@
+
+  ╔══════════════════════════════════════╗
+  ║     SPIDER-VERSE // CLASSIFIED       ║
+  ║     AABHAS SURYAVANSHI // 22         ║
+  ╚══════════════════════════════════════╝
+
+  SIZE: 320 x 440
+  JAVASCRIPT: NONE
+--> 
+
+<div
+  class="spider-card"
+  data-name="Aabhas Suryavanshi"
+  data-alias="Spooderman"
+  data-github="AabhasSuryavanshi22"
+  data-suit="#E62429"
+>
+
+<style>
+
+/* =====================================================
+   CORE
+   ===================================================== */
+
+.spider-card {
+  --red: #e62429;
+  --red2: #ff3045;
+  --blue: #00aaff;
+  --cyan: #37e8ff;
+  --black: #030408;
+  --white: #f5f7ff;
+  --green: #39ff88;
+
+  width: 320px;
+  height: 440px;
+  box-sizing: border-box;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 10px;
+
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 80% 18%,
+      rgba(230,36,41,.35),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 15% 75%,
+      rgba(0,170,255,.22),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #080b13 0%,
+      #020307 45%,
+      #130205 100%
+    );
+
+  border: 2px solid var(--red);
+
+  box-shadow:
+    0 0 8px var(--red),
+    0 0 25px rgba(230,36,41,.45),
+    inset 0 0 35px rgba(0,170,255,.08);
+}
+
+
+/* =====================================================
+   COMIC HALFTONE
+   ===================================================== */
+
+.spider-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,.12) 1px,
+      transparent 1px
+    );
+
+  background-size: 7px 7px;
+
+  opacity: .12;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   SCANLINE
+   ===================================================== */
+
+.spider-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 5px,
+      rgba(255,255,255,.025) 6px
+    );
+
+  pointer-events: none;
+
+  z-index: 20;
+}
+
+
+/* =====================================================
+   GIANT SPIDER
+   ===================================================== */
+
+.big-spider {
+  position: absolute;
+
+  right: -55px;
+  bottom: 45px;
+
+  width: 180px;
+  height: 180px;
+
+  border: 2px solid rgba(230,36,41,.18);
+
+  border-radius: 50%;
+
+  transform: rotate(-15deg);
+
+  opacity: .8;
+
+  pointer-events: none;
+}
+
+.big-spider::before {
+  content: "🕷";
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 125px;
+
+  filter:
+    grayscale(1)
+    contrast(2);
+
+  opacity: .10;
+}
+
+
+/* =====================================================
+   WEB RADAR
+   ===================================================== */
+
+.radar {
+  position: absolute;
+
+  top: -80px;
+  left: -75px;
+
+  width: 190px;
+  height: 190px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(0,170,255,.3);
+
+  box-shadow:
+    0 0 0 25px rgba(0,170,255,.025),
+    0 0 0 50px rgba(0,170,255,.02),
+    0 0 0 75px rgba(0,170,255,.015);
+
+  pointer-events: none;
+}
+
+.radar::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 90px;
+  height: 1px;
+
+  background: var(--cyan);
+
+  transform-origin: left;
+
+  transform: rotate(-30deg);
+
+  box-shadow:
+    0 0 8px var(--cyan);
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.header {
+  position: relative;
+
+  z-index: 10;
+
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.16);
+}
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--green);
+
+  box-shadow:
+    0 0 5px var(--green),
+    0 0 12px var(--green);
+}
+
+.classified {
+  font-family: monospace;
+
+  font-size: 6px;
+
+  letter-spacing: 1.5px;
+
+  color: var(--red2);
+}
+
+
+/* =====================================================
+   TOP HUD
+   ===================================================== */
+
+.hud {
+  position: relative;
+
+  z-index: 10;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 6px;
+
+  font-family: monospace;
+
+  font-size: 6px;
+
+  color: #74818d;
+
+  letter-spacing: 1px;
+}
+
+.hud strong {
+  color: var(--cyan);
+}
+
+
+/* =====================================================
+   HERO IMAGE
+   ===================================================== */
+
+.hero {
+  position: relative;
+
+  z-index: 8;
+
+  width: 100%;
+  height: 150px;
+
+  margin-top: 6px;
+
+  overflow: hidden;
+
+  background: #08090d;
+
+  border:
+    2px solid var(--red);
+
+  clip-path:
+    polygon(
+      0 0,
+      96% 0,
+      100% 8%,
+      100% 92%,
+      96% 100%,
+      0 100%,
+      0 7%
+    );
+
+  box-shadow:
+    0 0 15px rgba(230,36,41,.55),
+    inset 0 0 25px rgba(0,170,255,.2);
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  filter:
+    contrast(1.2)
+    saturate(1.4)
+    brightness(.82);
+}
+
+
+/* IMAGE COLOR GLITCH */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(230,36,41,.22),
+      transparent 35%,
+      rgba(0,170,255,.18)
+    );
+
+  mix-blend-mode: screen;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+/* IMAGE SCAN */
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 0;
+
+  height: 2px;
+
+  background: var(--cyan);
+
+  box-shadow:
+    0 0 10px var(--cyan);
+
+  opacity: .8;
+}
+
+
+/* =====================================================
+   TARGET RETICLE
+   ===================================================== */
+
+.reticle {
+  position: absolute;
+
+  right: 10px;
+  top: 10px;
+
+  width: 30px;
+  height: 30px;
+
+  border:
+    1px solid var(--cyan);
+
+  border-radius: 50%;
+
+  z-index: 5;
+
+  box-shadow:
+    0 0 8px rgba(55,232,255,.6);
+}
+
+.reticle::before,
+.reticle::after {
+  content: "";
+
+  position: absolute;
+
+  background: var(--cyan);
+}
+
+.reticle::before {
+  width: 40px;
+  height: 1px;
+
+  left: -6px;
+  top: 14px;
+}
+
+.reticle::after {
+  height: 40px;
+  width: 1px;
+
+  top: -6px;
+  left: 14px;
+}
+
+
+/* =====================================================
+   IMAGE LABEL
+   ===================================================== */
+
+.image-label {
+  position: absolute;
+
+  left: 8px;
+  bottom: 8px;
+
+  z-index: 5;
+
+  padding: 4px 7px;
+
+  background: rgba(0,0,0,.78);
+
+  border-left:
+    3px solid var(--red);
+
+  font-family: monospace;
+
+  font-size: 6px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =====================================================
+   IDENTITY
+   ===================================================== */
+
+.identity {
+  position: relative;
+
+  z-index: 10;
+
+  margin-top: 7px;
+}
+
+.alias {
+  position: relative;
+
+  margin: 0;
+
+  font-size: 26px;
+
+  line-height: .9;
+
+  font-weight: 1000;
+
+  font-style: italic;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  color: #fff;
+
+  text-shadow:
+    3px 0 var(--red),
+    -3px 0 var(--blue);
+}
+
+.alias::after {
+  content: "SPOODERMAN";
+
+  position: absolute;
+
+  left: 3px;
+  top: 3px;
+
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px rgba(255,255,255,.15);
+
+  z-index: -1;
+}
+
+.name {
+  margin: 5px 0 0;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: .7px;
+}
+
+.handle {
+  margin: 2px 0 0;
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  color: #82909d;
+}
+
+
+/* =====================================================
+   MUTATION BAR
+   ===================================================== */
+
+.mutation {
+  position: relative;
+
+  z-index: 10;
+
+  margin-top: 6px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.mutation-label {
+  font-family: monospace;
+
+  font-size: 6px;
+
+  color: #74818d;
+
+  letter-spacing: 1px;
+}
+
+.mutation-bar {
+  flex: 1;
+
+  height: 5px;
+
+  background: #151a20;
+
+  border:
+    1px solid rgba(255,255,255,.12);
+}
+
+.mutation-fill {
+  width: 87%;
+
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--blue),
+      var(--red)
+    );
+
+  box-shadow:
+    0 0 7px var(--red);
+}
+
+.mutation-value {
+  font-family: monospace;
+
+  font-size: 7px;
+
+  color: var(--red2);
+
+  font-weight: 900;
+}
+
+
+/* =====================================================
+   SKILLS
+   ===================================================== */
+
+.skills {
+  position: relative;
+
+  z-index: 10;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 4px;
+
+  margin: 6px 0 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.skills li {
+  padding: 3px 6px;
+
+  font-family: monospace;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: .5px;
+
+  border:
+    1px solid rgba(0,170,255,.5);
+
+  background:
+    rgba(0,170,255,.08);
+
+  color: #bdefff;
+
+  clip-path:
+    polygon(
+      5% 0,
+      100% 0,
+      95% 100%,
+      0 100%
+    );
+}
+
+
+/* =====================================================
+   DATA GRID
+   ===================================================== */
+
+.data-grid {
+  position: relative;
+
+  z-index: 10;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr 1fr;
+
+  gap: 4px;
+
+  margin-top: 7px;
+}
+
+.data-box {
+  padding: 5px 3px;
+
+  text-align: center;
+
+  background:
+    rgba(0,0,0,.58);
+
+  border:
+    1px solid rgba(255,255,255,.13);
+
+  box-shadow:
+    inset 0 0 10px rgba(0,170,255,.04);
+}
+
+.data-title {
+  display: block;
+
+  font-family: monospace;
+
+  font-size: 5px;
+
+  letter-spacing: 1px;
+
+  color: #697783;
+
+  margin-bottom: 3px;
+}
+
+.data-value {
+  display: block;
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  font-weight: 900;
+}
+
+.green {
+  color: var(--green);
+}
+
+.red {
+  color: var(--red2);
+}
+
+.blue {
+  color: var(--cyan);
+}
+
+
+/* =====================================================
+   WEB SHOOTER
+   ===================================================== */
+
+.web-shooter {
+  position: absolute;
+
+  left: 12px;
+  bottom: 43px;
+
+  width: 35px;
+  height: 35px;
+
+  border:
+    2px solid var(--blue);
+
+  transform: rotate(45deg);
+
+  opacity: .65;
+}
+
+.web-shooter::before,
+.web-shooter::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border:
+    1px solid var(--blue);
+}
+
+.web-shooter::after {
+  transform: rotate(45deg);
+}
+
+
+/* =====================================================
+   MULTIVERSE COORDINATES
+   ===================================================== */
+
+.coordinates {
+  position: absolute;
+
+  left: 11px;
+  bottom: 29px;
+
+  z-index: 10;
+
+  font-family: monospace;
+
+  font-size: 5px;
+
+  color: #5f6c77;
+
+  letter-spacing: 1px;
+}
+
+.coordinates strong {
+  color: var(--blue);
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.footer {
+  position: absolute;
+
+  left: 10px;
+  right: 10px;
+  bottom: 8px;
+
+  z-index: 15;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 6px;
+
+  border-top:
+    1px solid rgba(255,255,255,.13);
+
+  font-family: monospace;
+
+  font-size: 6px;
+
+  letter-spacing: 1px;
+}
+
+.society {
+  color: var(--red2);
+
+  font-weight: 900;
+}
+
+.verified {
+  color: var(--green);
+}
+
+.version {
+  color: #66727d;
+}
+
+
+/* =====================================================
+   CORNER HUD MARKS
+   ===================================================== */
+
+.corner {
+  position: absolute;
+
+  width: 15px;
+  height: 15px;
+
+  z-index: 18;
+
+  pointer-events: none;
+}
+
+.corner.tl {
+  top: 4px;
+  left: 4px;
+
+  border-top: 2px solid var(--cyan);
+  border-left: 2px solid var(--cyan);
+}
+
+.corner.tr {
+  top: 4px;
+  right: 4px;
+
+  border-top: 2px solid var(--red);
+  border-right: 2px solid var(--red);
+}
+
+.corner.bl {
+  bottom: 4px;
+  left: 4px;
+
+  border-bottom: 2px solid var(--red);
+  border-left: 2px solid var(--red);
+}
+
+.corner.br {
+  bottom: 4px;
+  right: 4px;
+
+  border-bottom: 2px solid var(--cyan);
+  border-right: 2px solid var(--cyan);
+}
+
+
+/* =====================================================
+   GLITCH BARS
+   ===================================================== */
+
+.glitch {
+  position: absolute;
+
+  z-index: 12;
+
+  right: 10px;
+  bottom: 75px;
+
+  width: 48px;
+  height: 3px;
+
+  background: var(--red);
+
+  box-shadow:
+    -8px 6px var(--blue),
+    5px 12px var(--red);
+
+  opacity: .6;
+}
+
+</style>
+
+
+<!-- ================================================
+     DECORATION
+     ================================================ -->
+
+<div class="radar"></div>
+
+<div class="big-spider"></div>
+
+<div class="web-shooter"></div>
+
+<div class="glitch"></div>
+
+<div class="corner tl"></div>
+<div class="corner tr"></div>
+<div class="corner bl"></div>
+<div class="corner br"></div>
+
+
+<!-- ================================================
+     HEADER
+     ================================================ -->
+
+<div class="header">
+
+  <div class="brand">
+    <span class="status-dot"></span>
+    SPIDER-ID // 22
+  </div>
+
+  <div class="classified">
+    CLASSIFIED
+  </div>
+
+</div>
+
+
+<!-- ================================================
+     HUD
+     ================================================ -->
+
+<div class="hud">
+
+  <span>
+    MULTIVERSE:
+    <strong>ACTIVE</strong>
+  </span>
+
+  <span>
+    SIGNAL:
+    <strong>98%</strong>
+  </span>
+
+</div>
+
+
+<!-- ================================================
+     HERO
+     ================================================ -->
+
+<div class="hero">
+
+  <img
+    src="https://i.etsystatic.com/42415510/r/il/875415/5997253473/il_794xN.5997253473_cpj6.jpg"
+    alt="Spider-Man Logo and Spider Web"
+  />
+
+  <div class="reticle"></div>
+
+  <div class="image-label">
+    SPIDER-SENSE // LOCKED
+  </div>
+
+</div>
+
+
+<!-- ================================================
+     IDENTITY
+     ================================================ -->
+
+<div class="identity">
+
+  <h1 class="alias">
+    SPOODERMAN
+  </h1>
+
+  <p class="name">
+    AABHAS SURYAVANSHI
+  </p>
+
+  <p class="handle">
+    @AabhasSuryavanshi22
+  </p>
+
+</div>
+
+
+<!-- ================================================
+     MUTATION
+     ================================================ -->
+
+<div class="mutation">
+
+  <span class="mutation-label">
+    SPIDER DNA
+  </span>
+
+  <div class="mutation-bar">
+    <div class="mutation-fill"></div>
+  </div>
+
+  <span class="mutation-value">
+    87%
+  </span>
+
+</div>
+
+
+<!-- ================================================
+     SKILLS
+     ================================================ -->
+
+<ul class="skills">
+
+  <li>WEB DEV</li>
+  <li>PYTHON</li>
+  <li>GITHUB</li>
+  <li>DEBUGGER</li>
+  <li>PROBLEM SOLVER</li>
+
+</ul>
+
+
+<!-- ================================================
+     DATA GRID
+     ================================================ -->
+
+<div class="data-grid">
+
+  <div class="data-box">
+
+    <span class="data-title">
+      SPIDER-SENSE
+    </span>
+
+    <span class="data-value green">
+      ONLINE
+    </span>
+
+  </div>
+
+
+  <div class="data-box">
+
+    <span class="data-title">
+      THREAT
+    </span>
+
+    <span class="data-value red">
+      FRIENDLY
+    </span>
+
+  </div>
+
+
+  <div class="data-box">
+
+    <span class="data-title">
+      EARTH
+    </span>
+
+    <span class="data-value blue">
+      1610
+    </span>
+
+  </div>
+
+</div>
+
+
+<!-- ================================================
+     MULTIVERSE COORDINATES
+     ================================================ -->
+
+<div class="coordinates">
+
+  COORDINATES //
+  <strong>IND-22 // MH // WEB</strong>
+
+</div>
+
+
+<!-- ================================================
+     FOOTER
+     ================================================ -->
+
+<div class="footer">
+
+  <span class="society">
+    SPIDER-SOCIETY
+  </span>
+
+  <span class="verified">
+    ● VERIFIED
+  </span>
+
+  <span class="version">
+    V.22.1610
+  </span>
+
+</div>
+
+</div>
+```
